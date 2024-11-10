@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp">
 
+
     <EditText
-        android:id="@+id/studentName"
+        android:id="@+id/studentId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Student ID" />
+
+    <EditText
+        android:id="@+id/studentNames"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Student Name" />
@@ -17,24 +25,84 @@
         android:layout_height="wrap_content"
         android:hint="Student Course" />
 
-    <Button
-        android:id="@+id/addStudentButton"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Student" />
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
 
-    <Button
-        android:id="@+id/updateStudentButton"
+        <!-- Add Student Button -->
+        <ImageButton
+            android:id="@+id/addStudentButton"
+            android:layout_width="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_add_24"
+        android:contentDescription="Add Student"
+            android:background="@drawable/button_outline"
+        android:padding="10dp" />
+
+        <!-- Update Student Button -->
+        <ImageButton
+            android:id="@+id/updateStudentButton"
+            android:layout_width="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_edit_24"
+        android:contentDescription="Update Student"
+            android:background="@drawable/button_outline"
+        android:padding="10dp" />
+
+        <!-- Delete Student Button -->
+        <ImageButton
+            android:id="@+id/deleteStudentButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_delete_24"
+            android:contentDescription="Delete Student"
+            android:background="@drawable/button_outline"
+            android:padding="10dp"
+            tools:ignore="ExtraText" />
+    </LinearLayout>
+    <!-- Table Headers Row -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Update Student" />
+        android:orientation="horizontal"
+        android:background="#DDDDDD"
+        android:padding="10dp"
+        android:layout_marginTop="20dp">
 
-    <Button
-        android:id="@+id/deleteStudentButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Delete Student" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ID"
+            android:textStyle="bold"
+            android:gravity="center"/>
 
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Name"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Course"
+            android:textStyle="bold"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- Student Data List -->
     <ListView
         android:id="@+id/studentListView"
         android:layout_width="match_parent"

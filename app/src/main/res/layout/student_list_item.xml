@@ -4,16 +4,30 @@
     android:orientation="horizontal"
     android:padding="10dp">
 
+    <!-- Student ID Column -->
+    <TextView
+        android:id="@+id/studentIdView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Id"
+        android:gravity="center"/>
+
+    <!-- Student Name Column -->
     <TextView
         android:id="@+id/studentNameView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Name" />
+        android:layout_weight="2"
+        android:text="Name"
+        android:gravity="center"/>
 
+    <!-- Student Course Column -->
     <TextView
         android:id="@+id/studentCourseView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="2"
         android:text="Course"
-        android:paddingLeft="10dp" />
+        android:gravity="center"/>
 </LinearLayout>
