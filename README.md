@@ -9,10 +9,10 @@ LoginApp is an Android application designed as part of a college project. The ap
 
 ## Screenshots
 
-![Login Screen](Screenshoot/login.png)  
+![Login Screen](Screenshoots/login.png)  
 *Login Screen*
 
-![Volume Calculator](Screenshoot/dashboard.png)  
+![Volume Calculator](Screenshoots/dashboard.png)  
 *Dashboard Screen*
 
 ## Features
